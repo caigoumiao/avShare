@@ -28,9 +28,9 @@ npm run build --report
 ## 已完成部分
 1. 大体布局
 
-首页布局：
-![](https://note.youdao.com/yws/api/personal/file/70E88761AE294329A87CA7F450884B6A?method=download&shareKey=0db55c83da5607daf00c04e86d26ec9d)
+  首页布局：
+  ![](https://note.youdao.com/yws/api/personal/file/70E88761AE294329A87CA7F450884B6A?method=download&shareKey=0db55c83da5607daf00c04e86d26ec9d)
 
-书籍详情：
-![](https://note.youdao.com/yws/api/personal/file/5BC516A2DBAD467C88E423A6DCEA4E54?method=download&shareKey=a02a9d4b88c7d502f2ab2338586840f8)
+  书籍详情：
+  ![](https://note.youdao.com/yws/api/personal/file/5BC516A2DBAD467C88E423A6DCEA4E54?method=download&shareKey=a02a9d4b88c7d502f2ab2338586840f8)
 
