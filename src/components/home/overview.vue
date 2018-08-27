@@ -1,6 +1,6 @@
 <template>
   <el-row>
-    <el-col xs="24" :sm="12" :md="8" :lg="6" v-for="(o, index) in bookProfiles" :key="index">
+    <el-col :xs="24" :sm="12" :md="8" :lg="6" v-for="(o, index) in bookProfiles" :key="index">
       <el-card :body-style="{ padding: '0px' }" style="border: 3px solid #DDD; height: 280px;">
         <img :src="o.img" class="image">
         <div style="padding: 14px;">

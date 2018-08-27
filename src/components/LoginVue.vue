@@ -12,6 +12,7 @@
             </el-form-item>
             <el-form-item>
               <el-button type="primary" @click="login">Log in</el-button>
+              <el-button type="primary" @click="regis">Regis</el-button>
             </el-form-item>
           </el-form>
         </el-col>
@@ -20,6 +21,7 @@
 </template>
 
 <script>
+import qs from 'qs'
 export default {
   name: 'LoginVue',
   data: function () {
@@ -33,7 +35,13 @@ export default {
   methods: {
     login () {
       // todo 判断登录操作
-      this.$router.push('/')
+      localStorage.setItem('user', qs.stringify(this.user))
+      alert('dsdsdsd')
+      this.$router.go(-1)
+    },
+    regis () {
+      // todo 注册操作
+      this.$router.push('/regis')
     }
   }
 }

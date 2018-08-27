@@ -19,7 +19,8 @@
           </div>
         </el-col>
         <el-col :span="2" :offset="9">
-          <a style="color:#4183c4;" @click="goLogin">Log In</a>
+          <a v-show="user==undefined" style="color:#4183c4;" @click="goLogin">Log In</a>
+          <a v-show="user!=undefined" style="color:#4183c4;" @click="logOut">Log Out</a>
         </el-col>
       </el-row>
       <router-view></router-view>
@@ -33,38 +34,58 @@ export default {
   name: 'App',
   data: function () {
     return {
-      searchInfo: ''
+      searchInfo: '',
+      user: localStorage.user
     }
   },
   methods: {
     goLogin () {
+      alert(this.user)
       this.$router.push('/login')
+    },
+    logOut () {
+      this.$confirm('确认注销？', '提示', {
+        confirmButtonText: '确定',
+        cancelButtonText: '取消',
+        type: 'error'
+      }).then(() => {
+        localStorage.removeItem('user')
+        this.user = undefined
+        this.$router.push('/login')
+      })
     },
     goIndex () {
       this.$router.push('/')
     }
+  },
+  updated: function () {
+    this.user = localStorage.user
   }
 }
 </script>
 
 <style>
-h1 {
-  font-size: 40px;
-  margin: 0px;
-}
-.input-with-select {
-  width: 160px;
-}
-#app {
-}
-#nav a{
-  text-decoration: none;
-  font-size: 13px;
-  color: #000;
-  font-weight: 600;
-  cursor: pointer;
-}
-#nav a:hover {
-  color: #409EFF;
-}
+  h1 {
+    font-size: 40px;
+    margin: 0px;
+  }
+
+  .input-with-select {
+    width: 160px;
+  }
+
+  #app {
+  }
+
+  #nav a {
+    text-decoration: none;
+    font-size: 13px;
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  #nav a:hover {
+    color: #409EFF;
+  }
 </style>

@@ -9,6 +9,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 Vue.config.productionTip = false
 
 Vue.use(ElementUI, {size: 'mini', zIndex: 3000})
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

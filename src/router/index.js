@@ -6,6 +6,7 @@ import LoginVue from '../components/LoginVue'
 import HomeVue from '../components/home/HomeVue'
 import UserVue from '../components/user/UserVue'
 import AdminVue from '../components/admin/AdminVue'
+import RegisVue from '../components/RegisVue'
 
 Vue.use(Router)
 
@@ -15,6 +16,11 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: LoginVue
+    },
+    {
+      path: '/regis',
+      name: 'regis',
+      component: RegisVue
     },
     {
       path: '/',
