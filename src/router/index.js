@@ -7,6 +7,8 @@ import HomeVue from '../components/home/HomeVue'
 import UserVue from '../components/user/UserVue'
 import AdminVue from '../components/admin/AdminVue'
 import RegisVue from '../components/RegisVue'
+import MyResourceVue from '../components/User/MyResourceVue'
+import UploadVue from '../components/User/UploadVue'
 
 Vue.use(Router)
 
@@ -42,7 +44,21 @@ export default new Router({
     },
     {
       path: '/user',
-      component: UserVue
+      component: UserVue,
+      children: [
+        {
+          path: '',
+          component: MyResourceVue
+        },
+        {
+          path: '/resource',
+          component: MyResourceVue
+        },
+        {
+          path: '/upload',
+          component: UploadVue
+        }
+      ]
     },
     {
       path: '/admin',

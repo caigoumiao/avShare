@@ -1,5 +1,5 @@
 <template>
-  <div id="app" style="overflow-y: scroll;">
+  <div id="app" style="overflow-y: scroll;background-color: #f7f8f9;">
     <el-container style="width: 60%;margin-left: 20%;">
       <el-header style="margin-left: 0px; padding: 0px 20px 0px 0px;height:auto;margin: 0px;">
         <h1>盗版资源分享网</h1>
@@ -21,6 +21,7 @@
         <el-col :span="2" :offset="9">
           <a v-show="user==undefined" style="color:#4183c4;" @click="goLogin">Log In</a>
           <a v-show="user!=undefined" style="color:#4183c4;" @click="logOut">Log Out</a>
+          <a @click="goUser">USER</a>
         </el-col>
       </el-row>
       <router-view></router-view>
@@ -56,6 +57,9 @@ export default {
     },
     goIndex () {
       this.$router.push('/')
+    },
+    goUser () {
+      this.$router.push('/user')
     }
   },
   updated: function () {
