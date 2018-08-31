@@ -1,6 +1,6 @@
 <template>
   <div>
-    // todo 资源列表组件设计
+    <!-- todo 资源列表组件设计 -->
     资源缩略列表
   </div>
 </template>
